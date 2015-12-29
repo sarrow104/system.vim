@@ -2,7 +2,7 @@ command! -nargs=? -complete=file WinExp	call system#WinExp_{util#MySys()}(<q-arg
 command! -nargs=* -complete=file Shell  call system#Shell_{util#MySys()}(<q-args>)
 command! -nargs=1 -complete=file File	call system#GNU_file_CheckAndOpen(<q-args>)
 
-command! -nargs=* -complete=file ShellHere  call system#ShellHere_{util#MySys()}(fnamemodify(bufname('%'), ":p:h"))
+command! -nargs=* -complete=file ShellHere  call system#Shell_{util#MySys()}(fnamemodify(bufname('%'), ":p:h"))
 command! -nargs=? -complete=file WinHere	call system#WinExp_{util#MySys()}(fnamemodify(bufname('%'), ":p:h"))
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
