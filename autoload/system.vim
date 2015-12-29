@@ -152,7 +152,7 @@ function! system#Shell_linux(args)	"{{{2
     if a:args =~ '^\s*$'
 	silent execute g:sys_shell . ' &'
     else
-	silent execute g:sys_shell . system#ToTermEnc(a:args) . ' &'
+	silent execute g:sys_shell.' --working-directory='.system#ToTermEnc(escape(a:args,' |%&[]')).' &'
     endif
 endfunction
 
