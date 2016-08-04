@@ -206,8 +206,8 @@ function! system#GNU_file_CheckAndOpen_windows(path) " {{{2
 	if tool_name[1] != ':'
 	    let tool_name = porttable_root . tool_name
 	endif
-	call msg#WarningMsg(path.': '.file_check_res)
-	execute 'silent !start ' . tool_name . ' "'.system#ToTermEnc(escape(path, '#')).'"'
+	call msg#WarningMsg('tool_name:'. tool_name . '; path: ' . path . '; mime: ' . file_check_res)
+	execute 'silent !start "' . tool_name . '" "'.system#ToTermEnc(escape(path, '#')).'"'
     else
 	call msg#WarningMsg('`'.path.'` is not a readable file!')
     endif
