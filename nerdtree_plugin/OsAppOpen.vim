@@ -1,8 +1,8 @@
-if exists("g:loaded_nerdtree_WinOpenDir")
+if exists("g:loaded_nerdtree_OsAppOpen")
     finish
 endif
 
-let g:loaded_nerdtree_WinOpenDir = 1
+let g:loaded_nerdtree_OsAppOpen = 1
 
 call NERDTreeAddKeyMap({
        \ 'key': '<CR>',
