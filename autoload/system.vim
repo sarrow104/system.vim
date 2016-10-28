@@ -231,7 +231,7 @@ endfunction
 
 function! system#OS_open_url_linux(file)	"{{{2
     " Sarrow: 2012-02-13
-    execute 'silent !xdg-open ' . escape(a:file, ' |#%&[]') . ' &'
+    execute 'silent !xdg-open ' . escape(a:file, ' !?|#%&[]') . ' &'
     " http://dl.pcgames.com.cn/download/50927.html#downloadAddress
     " 得到：
     " http://dl.pcgames.com.cn/download/50927.html/Files/swap.txtdownloadAddress
